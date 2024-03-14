@@ -1,0 +1,5 @@
+use UNIVER
+
+Select * 
+From PULPIT Full outer join TEACHER
+On TEACHER.PULPIT = PULPIT.PULPIT
