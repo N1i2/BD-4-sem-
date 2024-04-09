@@ -6,5 +6,5 @@ Where SUBJECT like '%OAeP%')[OAeP],
 (select avg(NOTE) From PROGRESS
 Where SUBJECT like '%BD%')[BD],
 (select avg(NOTE) From PROGRESS
-Where SUBJECT like '%CUBD%')[BD]
+Where SUBJECT like '%CUBD%')[CUBD]
 From PROGRESS

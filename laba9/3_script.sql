@@ -1,0 +1,8 @@
+PRINT 'Number of rows processed = ' + CAST(@@ROWCOUNT AS CHAR)
+PRINT 'SQL Servers version = ' + CAST(@@VERSION AS CHAR)
+PRINT 'Process ID = ' + CAST(@@SPID AS CHAR)
+PRINT 'Last error code = ' + CAST(@@ERROR AS CHAR)
+PRINT 'Servers name = ' + CAST(@@SERVERNAME AS CHAR)
+PRINT 'Transaction humidity level = ' + CAST(@@TRANCOUNT AS CHAR)
+PRINT 'Fetch status = ' + CAST(@@FETCH_STATUS AS CHAR)
+PRINT 'Level of complexity of the procedure = ' + CAST(@@NESTLEVEL AS CHAR)
