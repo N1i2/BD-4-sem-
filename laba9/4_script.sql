@@ -1,11 +1,8 @@
-Declare @x float = 5,
-@t float = 10;
+--Declare @x float = 5;
+--Declare @t float = 10;
 
---Declare @x float = 10,
---@t float = 5;
-
---Declare @x float = 5,
---@t float = 5;
+Declare @x float = 10;
+Declare @t float = 5;
 
 Declare @z float;
 
@@ -28,14 +25,13 @@ Print '2) ' + @fullFio + ' == '+ @shortFio;
 --////////////////////////////////////////////////////////////
 use UNIVER;
 
-Declare @student table (name varchar(100), Birthday varchar(50), age int);
+Declare @name varchar(100), @bday varchar(50), @age int;
 
-Declare @name varchar(100) = (Select Top 1 stu.NAME From STUDENT stu Where MONTH(stu.BDAY) = MONTH(getdate())+1);
-Declare @bday varchar(50) = (Select Top 1 stu.BDAY From STUDENT stu Where MONTH(stu.BDAY) = MONTH(getdate())+1);
-Declare @age int = datediff(YEAR, @bday, getdate());
-insert into @student values(@name, @bday, @age); 
+Set @name = (Select Top 1 stu.NAME From STUDENT stu Where MONTH(stu.BDAY) = MONTH(getdate())+1);
+Set @bday = (Select Top 1 stu.BDAY From STUDENT stu Where MONTH(stu.BDAY) = MONTH(getdate())+1);
+Set @age = datediff(YEAR, @bday, getdate());
 
-Select * from @student
+print '3) Name = ' + @name + '; Berthday = ' + @bday + '; age = ' + Convert(varchar(50), @age);
 
 --////////////////////////////////////////////////////////////
 DECLARE @examDay date = (
@@ -44,4 +40,4 @@ FROM PROGRESS pr JOIN STUDENT stu
 ON stu.IDSTUDENT = pr.IDSTUDENT
 WHERE pr.SUBJECT = 'BD' AND stu.IDGROUP = 17)
 
-PRINT '3) ' + DATENAME(dw, @examDay);
+PRINT '4) ' + DATENAME(dw, @examDay);

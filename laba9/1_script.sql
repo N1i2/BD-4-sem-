@@ -3,6 +3,8 @@ DECLARE @myCh char = 'h',
 
 Declare @myDate date,
 @myDateTime datetime;
+--go
+set @myDate = '2020-05-05';
 
 Declare @myInt int,
 		@mySmall smallint,

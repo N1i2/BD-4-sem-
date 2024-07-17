@@ -1,6 +1,6 @@
-Drop table #seven
+--Drop table #seven
 
-Create table #seven(id1 int, id2 varchar(50), id3 date);
+--Create table #seven(id1 int, id2 varchar(50), id3 date);
 
 Set nocount on;
 
